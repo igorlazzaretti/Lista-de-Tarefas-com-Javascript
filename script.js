@@ -6,22 +6,30 @@ class TarefaApp extends Component {
         this.state = { tarefas: [], item: ""};
     }
 
-    handleChange =(event) => {}
+    handleChange =(event) => {
+        this.setState({ item: event.target.value});
+    }
 
-    add = () =>{}
+    add = () =>{
+        const{ tarefas, item } = this.state;
+        if(item.length === 0){ alert("Digite uma tarefa válida!")}
+        else {
+            this.setState({ tarefas: tarefas.concat(item), item: ""});
+        }
+    }
 
     check = (e) =>{}
 
     del = (id) =>{}
-    
+
     render = () =>{
         const { tarefas, item} = this.state;
         return(
             <div>
                 <header className="header">
                 <h1>Lista de Tarefas - Chega de Procrastinar</h1>
-                <input type="text" placeholder="Digite sua tarefa..."    />
-                <span><i className="fas fa-plus-circle"></i></span>
+                <input onChange={this.handleChange} value={item} type="text" placeholder="Digite sua tarefa..."    />
+                <span onClick=[{this.add}]><i className="fas fa-plus-circle"></i></span>
                 </header>
                 <ul>
                     <li>
