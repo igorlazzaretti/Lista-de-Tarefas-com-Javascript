@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&family=Paytone+One&family=Poppins:wght@400;500;600;700;800&family=Rajdhani:wght@500&display=swap');
+
+
+body{
+margin:0;
+font-family: 'Rajdhani', sans-serif;    
+}
+header{
+    background-color: cornflowerblue;
+    color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+header h1{
+    width: 100%;
+    text-align: center;
+}
+header input{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 60%;
+    font-size: 18px;
+}
+header span{
+    padding-left: 10px;
+    font-size: 35px;
+    cursor:pointer;
+}
+header span:hover{
+    transform: scale(1.3)
+}
+ul{ margin: 0; padding: 0;
+}
+ul li{
+    cursor: pointer;
+    padding: 10px 2px;
+    list-style-type: 0;
+    font-size: 18px;
+    display: flex;
+    transition: 0.3s;
+    align-items: center;    
+}
+ul li:nth-child(odd){
+    background-color: bisque;
+}
+ul li:hover{
+    background-color:coral;
+    font-size: 25px;
+}
+ul li span{ width: 80%;}
+ul li i{width: 10%; text-align: center;}
+.close{color: darkred;
+}
+.close:hover{
+    transform: scale(1.3)
+    ;color:rgb(20, 147, 220)
+}
+
+
+
+
+
+
+
+
