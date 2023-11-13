@@ -50,6 +50,15 @@ btn.addEventListener("click", function(){
         li3.remove();
     }
     tarefa.value = "";
+    
+    // apagar um item da lista
+    const close = document.querySelectorAll('.close')
+    for(let i=0; i<close.length; i++){
+        close[i].addEventListener("click", function(){
+            close[i].parentElement.remove()
+        })
+        }
+
 
     })
  </script>
