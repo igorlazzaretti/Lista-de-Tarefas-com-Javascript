@@ -50,20 +50,27 @@ btn.addEventListener("click", function(){
         li3.remove();
     }
     tarefa.value = ""
-    
-    // apagar um item da lista
+      
+
     const close = document.querySelectorAll('.close')
     for(let i=0; i<close.length; i++){
         close[i].addEventListener("click", function(){
             close[i].parentElement.remove()
         })
-        };
+        }    
+    })
+        // apagar um item da lista
+    const close = document.querySelectorAll('.close')
+    for(let i=0; i<close.length; i++){
+        close[i].addEventListener("click", function(){
+            close[i].parentElement.remove()
+        })
+        }
+
     // marcar como concluido
     lista.addEventListener("click", function(e){
         e.target.parentElement.querySelector(".check").style.color = "#349223";
         e.target.parentElement.querySelector("span").style.textDecoration = "line-through";
-
-    })
 
     })
  </script>
