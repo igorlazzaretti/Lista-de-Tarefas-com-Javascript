@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
     <link rel="stylesheet" href="./estilo.css">
-    <script src="./script.js"></script>
 
     <title>Sua Lista de Tarefas</title>
 </head>
@@ -19,14 +18,40 @@
     </header>
 
     <ul id="lista">
-        <li> <i class="fas fa-check-circle check"></i><span> Emagrecer 30kg em um dia</span><i
+        <li id="li1"> <i class="fas fa-check-circle check"></i><span> Emagrecer 30 kg em um dia</span><i
                 class="fa-solid fa-trash-can close"></i></li>
-        <li> <i class="fas fa-check-circle check"></i><span> Passar o pano no chão direito</span><i
-                class="fa-solid fa-trash-can close"></i></li>
-        <li> <i class="fas fa-check-circle check"></i><span> Ir pra praia o quanto antes pelo amor de Deus</span><i
-                class="fa-solid fa-trash-can close"></i></li>
+        <li id="li2"> <i class="fas fa-check-circle check"></i><span> Ir para a pra praia o quanto antes pelo amor de Deus </span><i class="fa-solid fa-trash-can close"></i></li>
+        <li id="li3"> <i class="fas fa-check-circle check"></i><span> Acaber esse curso de programação para ser oficialmente um garoto de programa</span><i class="fa-solid fa-trash-can close"></i></li>
     </ul>
 </body>
+ <script>
 
+const tarefa = document.querySelector('#tarefa')
+const btn = document.querySelector("#btn")
+const lista = document.querySelector("#lista")
+const li1 = document.querySelector('#li1')
+const li2 = document.querySelector('#li2')
+const li3 = document.querySelector('#li3')
+
+btn.addEventListener("click", function(){
+    li1.remove();
+    li2.remove();
+    li3.remove();
+    if (tarefa.value == ""){
+        alert("Digite uma tarefa válida né!")
+        
+    }  else {
+
+        lista.innerHTML += `  <li> 
+        <i class="fas fa-check-circle check"></i>
+        <span>${tarefa.value}</span>
+        <i class="fa-solid fa-trash-can close"></i>
+        </li>`;
+        li3.remove();
+    }
+    tarefa.value = "";
+
+    })
+ </script>
 </html>
 
